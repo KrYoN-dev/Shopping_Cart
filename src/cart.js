@@ -12,7 +12,7 @@ const Cart = () =>{
 
     useEffect(()=>{
         getCart();
-    },[true]);
+    },[]);
 
     const[msg , updateMsg] = useState("");
     const deleteItem = (id) =>{
@@ -93,7 +93,7 @@ const Cart = () =>{
                                             <td>{pro.id}</td>
                                             <td>{pro.name}</td>  
                                             <td>{pro.price}</td> 
-                                            <td><img src={pro.photo} height="50" width="70"/></td>  
+                                            <td><img src={pro.photo} height="50" width="70" alt=""/></td>  
                                             <td>
                                                 <button
                                                     className='btn btn-danger btn-m'

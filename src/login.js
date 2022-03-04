@@ -7,7 +7,7 @@ const Login = () =>{
 	const[pass, pickPassword] = useState("");
 	const GoLogin = () =>{
 		var status = false;
-		if(email=="" || pass==""){
+		if(email==="" || pass===""){
 			updateMessage("Please Enter Details");
 		}else{
 			updateMessage("Please Wait Processing..");
@@ -15,7 +15,7 @@ const Login = () =>{
 			.then(response=>{
 				for(var i=0; i<response.data.length; i++){
 					var vendor = response.data[i]; // assign 1 vendor info to vendor variable
-					if(email == vendor.email && pass == vendor.password){
+					if(email === vendor.email && pass === vendor.password){
 						updateMessage("Success : Redirecting...");
 						status = true;
 						localStorage.setItem("vendorid", vendor.id);
@@ -25,7 +25,7 @@ const Login = () =>{
 						break;
 					}
 				}
-				if(status==false){
+				if(status===false){
 					updateMessage("Invalid or Not Exists");
 				}
 			})

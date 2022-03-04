@@ -10,7 +10,7 @@ const Productlist = () =>{
     }
     useEffect(()=>{
         getProduct();
-    },[true]);
+    },[]);
 
     const[message , updateMsg] = useState("");
     const addtocart = (productData) =>{
